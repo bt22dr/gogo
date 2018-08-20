@@ -79,3 +79,22 @@ func Example_sliceCap() {
 	//
 	// [1 2 100 4 5] [1 2 100] [100 4 5] [1 2 100 4]
 }
+
+func Example_sliceCopy1() {
+	src := []int{30, 20, 50, 10, 40}
+	dest := make([]int, len(src))
+	for i := range src {
+		dest[i] = src[i]
+	}
+	fmt.Println(dest)
+	// Output: [30 20 50 10 40]
+}
+
+func Example_sliceCopy2() {
+	src := []int{30, 20, 50, 10, 40}
+	dest := make([]int, 3)
+	n := copy(dest, src)
+	fmt.Println(n, dest)
+
+	// Output: 3 [30 20 50]
+}

@@ -1,21 +1,24 @@
 package eval
 
-// Eval returns the evaluation result of the given expr.
 import (
 	"strconv"
 	"strings"
 )
 
+// Eval returns the evaluation result of the given expr.
 // The expression can have +, -, *, /, (, ) operators and
 // decimal integers. Operators and operands should be
+// space delimited.
 func Eval(expr string) int {
 	var ops []string
 	var nums []int
+	// 숫자 스택에서 숫자를 하나 꺼내어 반환
 	pop := func() int {
 		last := nums[len(nums)-1]
 		nums = nums[:len(nums)-1]
 		return last
 	}
+	// 우선순위 같거나 높은 연산들 목록을 받아 연산 적용
 	reduce := func(higher string) {
 		for len(ops) > 0 {
 			op := ops[len(ops)-1]
