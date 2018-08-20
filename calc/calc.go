@@ -58,7 +58,7 @@ func Eval(opMap map[string]BinOp, prec PrecMap, expr string) int {
 			}
 		}
 	}
-	for _, token := range strings.Split(expr, " ") {
+	for _, token := range strings.Fields(expr) {
 		if token == "(" {
 			ops = append(ops, token)
 		} else if _, ok := prec[token]; ok {

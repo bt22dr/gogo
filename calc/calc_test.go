@@ -32,6 +32,7 @@ func ExampleNewEvaluator() {
 	})
 	fmt.Println(eval("5"))
 	fmt.Println(eval("1 + 2"))
+	fmt.Println(eval("1   +     2"))
 	fmt.Println(eval("1 - 2 - 4"))
 	fmt.Println(eval("( 3 - 2 ** 3 ) * ( -2 )"))
 	fmt.Println(eval("3 * ( 3 + 1 * 3 ) / ( -2 )"))
@@ -41,6 +42,7 @@ func ExampleNewEvaluator() {
 	fmt.Println(eval("2 ** 2 ** 3"))
 	// Output:
 	// 5
+	// 3
 	// 3
 	// -5
 	// 10
