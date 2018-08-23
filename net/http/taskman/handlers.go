@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"text/template"
 
+	"github.com/bt22dr/gogo/task"
 	"github.com/gorilla/mux"
-	"github.com/jaeyeom/gogo/task"
 )
 
 var m = task.NewInMemoryAccessor()

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/jaeyeom/gogo/task"
+	"github.com/bt22dr/gogo/task"
 )
 
 func Example_ResponseError_MarshalUnmarshal() {
